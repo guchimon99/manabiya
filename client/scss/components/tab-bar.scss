@@ -1,0 +1,28 @@
+.tabBar {
+    $height: 3rem;
+    $borderWidth: 0.16rem;
+    width: 100%;
+    height: $height;
+
+    &_tab {
+        display: inline-block;
+        height: $height;
+        line-height: $height - $borderWidth;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        border-bottom: solid $borderWidth transparent;
+        color: $color-white;
+        min-width: 6rem;
+
+        @include clickable;
+
+        &:focus {
+            outline: none;
+        }
+
+        &-active{
+            border-bottom-color: $color-primary
+        }
+    }
+}

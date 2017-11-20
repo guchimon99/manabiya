@@ -1,0 +1,70 @@
+.orderTable,
+.tradeTable {
+    width: 100%;
+    height: 100%;
+    table {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    thead,
+    tbody {
+        display: block;
+    }
+    thead {
+        padding: 0.6rem 0;
+        border-bottom: solid 0.1rem $color-border-color;
+    }
+    tbody {
+        overflow: auto;
+        tr {
+            margin: 0.6rem 0;
+        }
+    }
+    tr {
+        display: block;
+        text-size-adjust: 100%;
+        vertical-align: middle;
+        box-sizing: border-box;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            clear: both;
+        }
+    }
+    th,
+    td {
+        display: block;
+        box-sizing: content-box;
+        line-height: 1.8rem;
+        float: left;
+        font-weight: normal;
+        font-size: 0.91rem;
+        overflow: hidden;
+        white-space:nowrap;
+        text-align: center;
+    }
+}
+
+
+.orderTable {
+    th,
+    td {
+        width: 4.6rem;
+        padding: 0 calc((100% - 63rem)/22);
+    }
+}
+
+.tradeTable {
+    th,
+    td {
+        width: 4.6rem;
+        padding: 0 calc((100% - 47rem)/22);
+        &:nth-child(10) {
+            width: 8rem;
+        }
+    }
+}

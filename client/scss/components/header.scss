@@ -1,0 +1,43 @@
+.header {
+    $headerHeight: 3.4rem;
+    height: $headerHeight;
+    width: 100%;
+    border-bottom: solid 1px $color-border-color;
+    display: flex;
+
+    &_brand {
+
+        width: $headerHeight;
+        border-right: solid 1px $color-border-color;
+        text-align: center;
+
+        i.fa {
+            font-size: 1.4rem;
+            line-height: $headerHeight;
+        }
+    }
+
+    &_pair {
+        width: 8.5rem;
+        border-right: solid 1px $color-border-color;
+        line-height: $headerHeight;
+        text-align: center;
+        @include clickable;
+    }
+
+    &_overview,
+    &_account {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        &Col {
+            line-height: $headerHeight;
+            padding: 0 0.6rem;
+        }
+    }
+
+    &_overview {
+        flex-grow: 1;
+    }
+}

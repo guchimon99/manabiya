@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: transparent;
+    padding: 0.2rem;
+    line-height: 3.4rem;
+    border-radius: 0.2rem;
+
+    &-sm {
+
+    }
+
+    &-primary {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    &-danger {
+
+    }
+
+    &-disactive {
+        border-color: $color-white;
+        color: $color-white;
+        background-color: rgba($color-white, 0.2);
+    }
+}

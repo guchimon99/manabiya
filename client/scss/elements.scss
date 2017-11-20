@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    * {
+        // outline: red 1px solid;
+    }
+}
