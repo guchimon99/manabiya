@@ -1,6 +1,15 @@
 import * as sync from './sync'
+import * as api from 'api/chart'
 
-export const setSingle = (single) =>
+export const fetchPrice = (coin) =>
     dispatch => {
-        dispatch(sync.setSingleStart(single))
+        api.getPrice(coin)
+        .then(body => {
+            if (!body.error) {
+                console.log(body)
+                dispatch(sync.setPrice(body.data))
+            } else {
+                console.error(`ERROR:${body.error.message}`)
+            }
+        })
     }

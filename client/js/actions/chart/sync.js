@@ -1,4 +1,4 @@
-export const setSingleStart = (single) => ({
-    type: "SET_SINGLE",
-    single
+export const setPrice = (price) => ({
+    type: "SET_PRICE",
+    price
 })

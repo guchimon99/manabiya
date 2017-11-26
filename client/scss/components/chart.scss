@@ -1,0 +1,9 @@
+.chart {
+    &_line{
+        &-price {
+            fill: transparent;
+            stroke: #FFF;
+            stroke-width: 1px;
+        }
+    }
+}

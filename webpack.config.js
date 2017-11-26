@@ -6,7 +6,8 @@ module.exports = {
         path.resolve(__dirname, 'client/js/entry.js')
     ],
     output: {
-        path: path.resolve(__dirname, 'public/dist/js/entry.js')
+        path: path.resolve(__dirname, 'public/dist/js'),
+        filename: 'bundle.js'
     },
     resolve: {
         extensions: ['.js'],

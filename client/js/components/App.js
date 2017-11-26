@@ -17,9 +17,14 @@ export default class App extends Base {
         super(props)
 
         this.state = {
+            coin: "ZNY",
             rightTab : "order",
             bottomTab: "order"
         }
+    }
+
+    componentDidMount() {
+        this.props.fetchPrice(this.state.coin)
     }
 
     render() {
@@ -31,7 +36,7 @@ export default class App extends Base {
                 <div className="app_row app_row-body">
                     <div className="app_col app_col-left">
                         <div className="app_row app_row-chart">
-                            <Chart />
+                            <Chart source={this.props.chart} />
                         </div>
                         <div className="app_row app_row-tabBar">
                             <div className="tabBar">

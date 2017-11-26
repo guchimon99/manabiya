@@ -5,11 +5,13 @@
   "repository": "https://github.com/guchimon99/manabiya",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack-dev-server",
+    "start": "node server/app.js",
     "build": "run-s build:*",
+    "watch": "run-p watch:*",
     "build:js": "webpack",
-    "build:css": "sass ./src/scss/style.scss ./dist/css/style.css",
-    "watch:css": "sass --watch ./src/scss/style.scss:./dist/css/style.css"
+    "watch:js": "webpack --watch",
+    "build:css": "sass ./client/scss/style.scss ./public/dist/css/style.css",
+    "watch:css": "sass --watch ./client/scss/style.scss:./public/dist/css/style.css"
   },
   "author": "guchimon99",
   "license": "MIT",

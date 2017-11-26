@@ -11,16 +11,16 @@ import Base from "components/Base"
 
 export default class Chart extends Base {
 
-    // constructor(props) {
-    //     super(props)
+    constructor(props) {
+        super(props)
 
-    //     this.state = {
-    //         x: 0,
-    //         y: 0,
-    //         width: 400,
-    //         height: 300
-    //     }
-    // }
+        this.state = {
+            x: 0,
+            y: 0,
+            width: 400,
+            height: 300
+        }
+    }
 
     // componentDidMount(){
     //     window.addEventListener("resize", ()=>{
@@ -32,14 +32,32 @@ export default class Chart extends Base {
     //     })
     // }
 
+    getPriceLinePath() {
+        var price = this.props.source.get('price')
+        console.log(price)
+        if (price == null) {
+            return "M0,0"
+        } else {
+            var d = ""
+
+            price.forEach((p) => {
+                console.log(p)
+            })
+            return d
+        }
+    }
+
+    componentDidUpdate() {
+        console.log(this.props.source)
+    }
+
     render() {
         return (
             <div className="chart">
                 <svg width={this.state.width} height={this.state.height}>
-                    <g>
-
-
-                    </g>
+                    <path
+                        className="chart_line-price"
+                        d={this.getPriceLinePath()}/>
                 </svg>
             </div>
         )
